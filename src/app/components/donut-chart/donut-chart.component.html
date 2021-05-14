@@ -1,0 +1,7 @@
+<apx-chart *ngIf="loadingChart; else loading" [series]="chartData.series" [chart]="{type: 'donut', height: 250}" [labels]="chartData.labels"></apx-chart>
+
+<ng-template #loading>
+    <div class="loading">
+        <span></span>
+    </div>
+</ng-template>

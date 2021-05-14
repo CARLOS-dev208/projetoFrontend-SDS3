@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+    gap: 20px;
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        .active {
+            color: black;
+            padding: 0.5rem;
+            border-radius: 4px;
+            background-color: #eee;
+        }
+    }
+}

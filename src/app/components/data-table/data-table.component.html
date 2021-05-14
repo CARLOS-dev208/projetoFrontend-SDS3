@@ -1,0 +1,24 @@
+<app-pagination [page]="service.page"></app-pagination>
+
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Vendedor</th>
+                <th>Clientes visitados</th>
+                <th>Negócios fechados</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pag of service.page?.content">
+                <td>{{today | date:'dd/MM/yyyy'}}</td>
+                <td>{{pag.seller.name}}</td>
+                <td>{{pag.visited}}</td>
+                <td>{{pag.deals}}</td>
+                <td>{{pag.amount | number: '2.0-0':'pt'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

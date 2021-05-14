@@ -1,0 +1,15 @@
+<div class="row d-flex justify-content-center">
+    <nav>
+        <ul class="pagination">
+            <li class="page-item" [class.disabled]="page?.first">
+                <button class="page-link" (click)="pagina(page?.number - 1)">Anterior</button>
+            </li>
+            <li class="page-item disabled">
+                <span class="page-link">{{page?.number + 1}}</span>
+            </li>
+            <li class="page-item" [class.disabled]="page?.last">
+                <button class="page-link" (click)="pagina(page?.number + 1)">Próxima</button>
+            </li>
+        </ul>
+    </nav>
+</div>
